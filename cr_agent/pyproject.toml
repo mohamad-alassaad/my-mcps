@@ -1,0 +1,15 @@
+[project]
+name = "meetscribe"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "azure-identity>=1.25.2",
+    "azure-storage-blob>=12.28.0",
+    "fastapi>=0.129.0",
+    "fastmcp>=3.1.0",
+    "mcp==1.26.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+]

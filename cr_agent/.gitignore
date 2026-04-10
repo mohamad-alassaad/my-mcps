@@ -1,0 +1,137 @@
+#########################
+## Environment & Secrets
+#########################
+
+# All .env files except examples/templates
+.env
+.env.*
+!.env.secrets.example
+!.env.development.example
+
+# Credentials - NEVER commit real credentials
+credentials/credentials.json
+credentials/*.pickle
+calendar*.pickle
+gmail*.pickle
+google*.pickle
+calendar_credentials.json
+
+#########################
+## Python
+#########################
+
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.whl
+
+# Testing artifacts
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+#########################
+## Node.js
+#########################
+
+node_modules/
+
+#########################
+## Rust / Cargo
+#########################
+
+.cargo/
+target/
+**/*.rs.bk
+*.pdb
+
+#########################
+## Build artifacts & binaries
+#########################
+
+_tmp/
+.goose-bin/
+temporal.exe
+temporal-service/temporal-service.exe
+out/
+
+#########################
+## Goose application state
+#########################
+
+.goose/
+goosed.log
+
+#########################
+## IDE & OS files
+#########################
+
+**/.DS_Store
+.vscode/
+.idea/
+
+#########################
+## Large non-code directories
+## (reference materials, not source code)
+#########################
+
+_dev_llm_context/
+_project_documents/
+
+# Upstream goose documentation (456 MB of blog images, videos, etc.)
+# Use /* instead of / so git still descends into the directory (allows un-ignore below)
+goose_talan_fork/documentation/*
+!goose_talan_fork/documentation/static/
+goose_talan_fork/documentation/static/*
+!goose_talan_fork/documentation/static/img/
+
+#########################
+## Data & cloud storage
+#########################
+
+cloud_data*
+dummy_data/contacts_database.json
+
+#########################
+## Logs, PIDs & temp state
+#########################
+
+*.log
+*.pid
+.tmp_state/
+
+#########################
+## Debug and temporary test files
+#########################
+
+debug_*.py
+debug_*.txt
+test_actual_*.py
+test_minimal_*.html
+test_suggestions_*.py
+test_arxiv_gpt5.py
+test_browser_use_gpt5.py
+test_fastmcp_browser.py
+test_gpt5_agent.py
+test_mcp_browser_final.py
+test_mcp_tools.py
+test_openai_direct.py
+
+#########################
+## Misc generated files
+#########################
+
+/architectures
+UI_ARCHITECTURE_EXPLANATION.md
+MCP_UI_LLM_LIMITATION_EXPLAINED.md
+benchmark-*
+benchconf.json
+foo_test
+PROGRESS.md

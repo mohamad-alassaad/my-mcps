@@ -1,0 +1,23 @@
+services:
+  ollama:
+    build:
+      context: ./ollama
+    container_name: ollama-service
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+  cr_mcp:
+    build:
+      context: .
+    container_name: cr-mcp-service
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - MCP_PORT=9000
+    ports:
+      - "9000:9000"
+    depends_on:
+      - ollama
+
+volumes:
+  ollama_data:
